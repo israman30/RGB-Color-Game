@@ -41,3 +41,35 @@ button:hover {
     color: #fff;
     background: steelblue;
 }
+
+#container {
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+#displayColor {
+    font-size: 200%;
+}
+
+#message {
+    display: inline-block;
+    width: 20%;
+}
+
+.square {
+    width: 30%;
+    background: purple;
+    padding-bottom: 30%;
+    float: left;
+    margin: 1.6%;
+    border-radius: 50%;
+    transition: background 0.3s all;
+    -webkit-transition: background 0.3s all;
+    -moz-transition: backoground 0,3s all;
+}
+
+/* Add a class */
+.selected {
+    color: #fff;
+    background: steelblue;
+}
