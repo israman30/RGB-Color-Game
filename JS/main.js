@@ -35,8 +35,13 @@ function pickColor(){
 
 }
 
+// This funciont will generate random colors adding it to an array
 function generateRandomColors(number){
-
+    var colorsArray = [];
+    for (var i = 0; i < number; i++){
+        colorsArray.push(randomColor());
+    }
+    console.log(colorsArray);
 }
 
 // Function creates random color
@@ -49,7 +54,6 @@ function randomColor(){
     var blue = Math.floor(Math.random() * 256);
 
     let color = 'rgb(' + red + ', ' + green + ', ' + blue + ')';
-    console.log(color);
-
+    
     return color;
 }
