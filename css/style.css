@@ -1,0 +1,43 @@
+body {
+    background: #0f0c29;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #24243e, #302b63, #0f0c29); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+}
+
+h1 {
+    color: #fff;
+    text-align: center;
+    background: steelblue;
+    line-height: 1.1;
+    padding: 30px 0;
+    margin: 0;
+    font-weight: normal;
+    text-transform: uppercase;
+}
+
+#stripe {
+    background: #fff;
+    height: 30px;
+    text-align: center;
+    color: #000;
+}
+
+button {
+    border: none;
+    background: none;
+    text-transform: uppercase;
+    height: 100%;
+    font-weight: 700;
+    color: steelblue;
+    letter-spacing: 1px;
+    font-size: inherit;
+    transition: all 0.3s;
+    outline: none;
+}
+
+button:hover {
+    color: #fff;
+    background: steelblue;
+}
