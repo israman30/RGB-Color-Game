@@ -47,4 +47,9 @@ function randomColor(){
     var green = Math.floor(Math.random() * 256);
     // blue 0 -255
     var blue = Math.floor(Math.random() * 256);
+
+    let color = 'rgb(' + red + ', ' + green + ', ' + blue + ')';
+    console.log(color);
+
+    return color;
 }
