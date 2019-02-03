@@ -27,12 +27,18 @@ function reset(){
 
 }
 
+// this function changes the color of the squares
 function changeColors(color){
-
+    for (var i = 0; i < squares.length; i++){
+        // change each color to match the one given
+        squares[i].style.backgroundColor = color;
+    }
 }
 
+// Pick random color
 function pickColor(){
-
+    var random = Math.floor(Math.random() * colors.length);
+    return colors[random];
 }
 
 // This funciont will generate random colors adding it to an array
