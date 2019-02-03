@@ -11,6 +11,7 @@ var modeBtn = document.querySelectorAll('.mode');
 
 // initalizer function
 init();
+
 function init(){
     setupModeButtons();
     setupSquares();
@@ -25,12 +26,10 @@ function setupModeButtons(){
 
             this.classList.add('selected');
             // check if section is easy or hard
-            // easy 3 section, hard 6 secitons
-            if (this.textContent === 'Easy') {
-                numberOfSquares = 3;
-            } else {
-                numberOfSquares = 6;
-            }
+            // easy 3 section, hard 6 sections
+
+            this.textContent === 'Easy' ? numberOfSquares = 3 : numberOfSquares = 6;
+            
             // after select level, game is rested
             reset();
         });
@@ -58,7 +57,6 @@ function setupSquares(){
             }
         });
     }
-
 }
 
 function reset(){
