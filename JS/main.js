@@ -24,12 +24,34 @@ function setupSquares(){
 }
 
 function reset(){
+    // generate new colors
+    colors = generateRandomColors(numberOfSquares);
+    // pick a new color from array
+    pickedColor = pickColor();
+    //change color display to match the result
+    colorDisplay.textContent = pickedColor;
+    // reset text
+    resetBtn.textContent = 'New Colors';
+    // reset messageDisplay text
+    messageDisplay.textContent = '';
 
+    for (var i = 0; i < squares.length; i++){
+        if(colors[i]) {
+            squares[i].style.display = 'block';
+            squares[i].style.backgroundColor = colors[i];
+        } else {
+            squares[i].style.display = 'none';
+        }
+    }
+    // reset background color of RGB text
+    h1.style.backgroundColor = 'steelblue';
 }
 
 // BUTTON: ========= reset ========================
+// reset button clicks and generate new random colors.
 resetBtn.addEventListener('click', () => {
     // reset game
+    reset();
 })
 
 // this function changes the color of the squares
