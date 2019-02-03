@@ -27,6 +27,11 @@ function reset(){
 
 }
 
+// BUTTON: ========= reset ========================
+resetBtn.addEventListener('click', () => {
+    // reset game
+})
+
 // this function changes the color of the squares
 function changeColors(color){
     for (var i = 0; i < squares.length; i++){
