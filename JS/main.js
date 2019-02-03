@@ -10,16 +10,54 @@ var resetBtn = document.querySelector('#reset');
 var modeBtn = document.querySelectorAll('.mode');
 
 // initalizer function
-
+init();
 function init(){
-
+    setupModeButtons();
+    setupSquares();
+    reset();
 }
 
 function setupModeButtons(){
+    for (var i = 0; i < modeBtn.length; i++){
+        modeBtn[i].addEventListener('click', function(){
+            modeBtn[0].classList.remove('selected');
+            modeBtn[1].classList.remove('selected');
 
+            this.classList.add('selected');
+            // check if section is easy or hard
+            // easy 3 section, hard 6 secitons
+            if (this.textContent === 'Easy') {
+                numberOfSquares = 3;
+            } else {
+                numberOfSquares = 6;
+            }
+            // after select level, game is rested
+            reset();
+        });
+    }
 }
 
 function setupSquares(){
+    // fill the squares using a loop
+    for (var i = 0; i < squares.length; i++){
+        // add initial colors to the squares
+        squares[i].style.backgroundColor = colors[i];
+        // add click listener to squares
+        squares[i].addEventListener('click', function(){
+            // grab color when click a square
+            var clickedColor = this.style.backgroundColor;
+            // compare color to picked color
+            if (clickedColor === pickedColor){
+                messageDisplay.textContent = 'Correct!';
+                resetBtn.textContent = 'Play again';
+                changeColors(clickedColor);
+                h1.style.backgroundColor = clickedColor;
+            } else {
+                this.style.backgroundColor = '#232323';
+                messageDisplay.textContent = 'Try again';
+            }
+        });
+    }
 
 }
 
@@ -74,7 +112,7 @@ function generateRandomColors(number){
     for (var i = 0; i < number; i++){
         colorsArray.push(randomColor());
     }
-    console.log(colorsArray);
+    return colorsArray;
 }
 
 // Function creates random color
